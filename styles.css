@@ -1,181 +1,182 @@
- /* Custom CSS Variables */
-        :root {
-            --cream: #FFF8F0;
-            --soft-white: #FEFDFB;
-            --sage-green: #8B9D83;
-            --sage-dark: #6B7D63;
-            --text-primary: #2C2C2C;
-            --text-secondary: #5A5A5A;
-        }
+/* Custom CSS Variables */
+:root {
+    --cream: #FFF8F0;
+    --soft-white: #FEFDFB;
+    --white: #FFFFFF;
+    --sage-green: #8B9D83;
+    --sage-dark: #6B7D63;
+    --text-primary: #2C2C2C;
+    --text-secondary: #5A5A5A;
+}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--text-primary);
-            overflow-x: hidden;
-        }
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-primary);
+    overflow-x: hidden;
+}
 
-        /* Logo Font */
-        .logo-text {
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 500;
-            letter-spacing: 0.05em;
-        }
+/* Logo Font */
+.logo-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
 
-        /* Heading Font */
-        .heading-font {
-            font-family: 'Lora', serif;
-        }
+/* Heading Font */
+.heading-font {
+    font-family: 'Lora', serif;
+}
 
-        /* Smooth Transitions */
-        .transition-smooth {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
+/* Smooth Transitions */
+.transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-        /* Header Scroll Effect */
-        .header-scrolled {
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(12px);
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
-        }
+/* Header Scroll Effect */
+.header-scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
 
-        /* Mobile Menu Styles */
-        .mobile-menu {
-            transform: translateX(100%);
-            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
+/* Mobile Menu Styles */
+.mobile-menu {
+    transform: translateX(100%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-        .mobile-menu.active {
-            transform: translateX(0);
-        }
+.mobile-menu.active {
+    transform: translateX(0);
+}
 
-        /* Cart Badge */
-        .cart-badge {
-            position: absolute;
-            top: -6px;
-            right: -6px;
-            background: var(--sage-green);
-            color: white;
-            font-size: 10px;
-            font-weight: 600;
-            width: 18px;
-            height: 18px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+/* Cart Badge */
+.cart-badge {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: var(--sage-green);
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-        /* Hero Gradient Overlay */
-        .hero-overlay {
-            background: linear-gradient(
-                135deg,
-                rgba(255, 248, 240, 0.95) 0%,
-                rgba(254, 253, 251, 0.85) 50%,
-                rgba(255, 248, 240, 0.75) 100%
-            );
-        }
+/* Hero Gradient Overlay */
+.hero-overlay {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 248, 240, 0.95) 0%,
+        rgba(254, 253, 251, 0.85) 50%,
+        rgba(255, 248, 240, 0.75) 100%
+    );
+}
 
-        /* Button Hover Effects */
-        .btn-primary {
-            background: var(--sage-green);
-            color: white;
-            transition: all 0.3s ease;
-        }
+/* Button Hover Effects */
+.btn-primary {
+    background: var(--sage-green);
+    color: white;
+    transition: all 0.3s ease;
+}
 
-        .btn-primary:hover {
-            background: var(--sage-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(139, 157, 131, 0.3);
-        }
+.btn-primary:hover {
+    background: var(--sage-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(139, 157, 131, 0.3);
+}
 
-        .btn-secondary {
-            border: 2px solid var(--sage-green);
-            color: var(--sage-green);
-            background: transparent;
-            transition: all 0.3s ease;
-        }
+.btn-secondary {
+    border: 2px solid var(--sage-green);
+    color: var(--sage-green);
+    background: transparent;
+    transition: all 0.3s ease;
+}
 
-        .btn-secondary:hover {
-            background: var(--sage-green);
-            color: white;
-            transform: translateY(-2px);
-        }
+.btn-secondary:hover {
+    background: var(--sage-green);
+    color: white;
+    transform: translateY(-2px);
+}
 
-        /* Navigation Link Hover */
-        .nav-link {
-            position: relative;
-            color: var(--text-primary);
-            transition: color 0.3s ease;
-        }
+/* Navigation Link Hover */
+.nav-link {
+    position: relative;
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+}
 
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--sage-green);
-            transition: width 0.3s ease;
-        }
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--sage-green);
+    transition: width 0.3s ease;
+}
 
-        .nav-link:hover {
-            color: var(--sage-green);
-        }
+.nav-link:hover {
+    color: var(--sage-green);
+}
 
-        .nav-link:hover::after {
-            width: 100%;
-        }
+.nav-link:hover::after {
+    width: 100%;
+}
 
-        /* Icon Hover */
-        .icon-btn {
-            transition: all 0.3s ease;
-        }
+/* Icon Hover */
+.icon-btn {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+}
 
-        .icon-btn:hover {
-            color: var(--sage-green);
-            transform: scale(1.1);
-        }
+.icon-btn:hover {
+    color: var(--sage-green);
+    transform: scale(1.1);
+}
 
-        /* Hero Background Image */
-        .hero-bg {
-            background-image: url('https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?q=80&w=2000');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
+/* Hero Background Image */
+.hero-bg {
+    background-image: url('https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?q=80&w=2000');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
-        /* Fade In Animation */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+/* Fade In Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-        .fade-in-up {
-            animation: fadeInUp 0.8s ease-out forwards;
-        }
+.fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
 
-        .delay-1 { animation-delay: 0.2s; opacity: 0; }
-        .delay-2 { animation-delay: 0.4s; opacity: 0; }
-        .delay-3 { animation-delay: 0.6s; opacity: 0; }
+.delay-1 { animation-delay: 0.2s; opacity: 0; }
+.delay-2 { animation-delay: 0.4s; opacity: 0; }
+.delay-3 { animation-delay: 0.6s; opacity: 0; }
 
-
-
-
-
-        /* Categories Section */
+/* Categories Section */
 .categories-section {
     padding: 80px 20px;
     background-color: var(--cream);

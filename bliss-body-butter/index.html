@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bliss Body Butter | HABIECARE NATURALS</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <!-- Header - Matches Homepage Structure -->
+    <header>
+        <div class="logo">HABIECARE NATURALS</div>
+        <nav>
+            <a href="#shop">Shop</a>
+            <a href="#story">Our Story</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb">
+        <a href="../">Home</a> / <a href="#shop">Shop</a> / Bliss Body Butter
+    </div>
+
+    <!-- Product Section -->
+    <div class="product-container">
+        <!-- Product Images -->
+        <div class="product-images">
+            <div class="main-image">
+                <img src="../images/1.jpg" alt="Bliss Body Butter">
+            </div>
+            <div class="thumbnail-grid">
+                <div class="thumbnail">View 1</div>
+                <div class="thumbnail">View 2</div>
+                <div class="thumbnail">View 3</div>
+                <div class="thumbnail">View 4</div>
+            </div>
+        </div>
+
+        <!-- Product Info -->
+        <div class="product-info">
+            <h1 class="product-title">Bliss Body Butter</h1>
+            <div class="product-price">₦8,500</div>
+            <p class="product-description">
+                Indulge in deep, luxurious hydration with our Bliss Body Butter. Crafted with nourishing shea butter, 
+                coconut oil, and vitamin E, this rich formula melts into your skin, leaving it soft, smooth, and 
+                delicately scented. Perfect for daily use, especially after bathing.
+            </p>
+
+            <!-- Size Selection -->
+            <div class="size-selection">
+                <div class="size-label">Size</div>
+                <div class="size-options">
+                    <button class="size-option">200ml</button>
+                    <button class="size-option active">400ml</button>
+                    <button class="size-option">600ml</button>
+                </div>
+            </div>
+
+            <!-- Quantity Selection -->
+            <div class="quantity-selection">
+                <div class="quantity-label">Quantity</div>
+                <div class="quantity-controls">
+                    <button class="quantity-btn" onclick="changeQuantity(-1)">−</button>
+                    <div class="quantity-display" id="quantity">1</div>
+                    <button class="quantity-btn" onclick="changeQuantity(1)">+</button>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button class="btn btn-primary">Add to Cart</button>
+                <button class="btn btn-secondary">Buy Now</button>
+            </div>
+
+            <!-- Product Features -->
+            <div class="product-features">
+                <div class="feature-item">
+                    <div class="feature-icon">✓</div>
+                    <div class="feature-text">100% Natural Ingredients - No harsh chemicals or artificial fragrances</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">✓</div>
+                    <div class="feature-text">Deep Moisturization - Long-lasting hydration for all skin types</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">✓</div>
+                    <div class="feature-text">Handcrafted in Akure - Made with care and quality assurance</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">✓</div>
+                    <div class="feature-text">Free Shipping - On orders over ₦15,000</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Details Tabs -->
+    <div class="product-details">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('description')">Description</button>
+            <button class="tab" onclick="switchTab('ingredients')">Ingredients</button>
+            <button class="tab" onclick="switchTab('usage')">How to Use</button>
+        </div>
+
+        <div id="description" class="tab-content active">
+            <h3>About Bliss Body Butter</h3>
+            <p>
+                Our Bliss Body Butter is a luxurious treat for your skin. Made with the finest natural ingredients 
+                sourced responsibly, this body butter provides intense hydration while nourishing your skin from within.
+            </p>
+            <p>
+                The rich, creamy texture glides effortlessly onto your skin, absorbing quickly without leaving a 
+                greasy residue. Perfect for daily use, it helps restore your skin's natural moisture barrier and 
+                leaves you feeling pampered and refreshed.
+            </p>
+            <p>
+                Whether you have dry, sensitive, or normal skin, Bliss Body Butter adapts to your needs, providing 
+                customized care that keeps your skin healthy, supple, and radiant all day long.
+            </p>
+        </div>
+
+        <div id="ingredients" class="tab-content">
+            <h3>Key Ingredients</h3>
+            <ul>
+                <li><strong>Shea Butter:</strong> Rich in vitamins A and E, provides deep moisturization and helps improve skin elasticity</li>
+                <li><strong>Coconut Oil:</strong> Natural antibacterial properties, deeply penetrates to nourish and protect</li>
+                <li><strong>Vitamin E:</strong> Powerful antioxidant that helps protect skin from environmental damage</li>
+                <li><strong>Sweet Almond Oil:</strong> Lightweight and easily absorbed, helps soften and smooth skin texture</li>
+                <li><strong>Cocoa Butter:</strong> Forms a protective barrier to retain moisture and improve skin tone</li>
+                <li><strong>Essential Oils:</strong> Natural fragrance blend of lavender and vanilla for a calming, luxurious scent</li>
+            </ul>
+            <p>
+                All ingredients are 100% natural, cruelty-free, and sustainably sourced. Free from parabens, 
+                sulfates, and artificial fragrances.
+            </p>
+        </div>
+
+        <div id="usage" class="tab-content">
+            <h3>How to Use</h3>
+            <p>
+                For best results, apply Bliss Body Butter to clean, slightly damp skin immediately after bathing 
+                or showering. This helps lock in moisture and enhances absorption.
+            </p>
+            <p><strong>Step-by-step application:</strong></p>
+            <ul>
+                <li>Take a generous amount of body butter and warm it between your palms</li>
+                <li>Apply in gentle, circular motions, starting from your feet and working upward</li>
+                <li>Pay extra attention to dry areas like elbows, knees, and heels</li>
+                <li>Allow a minute or two for complete absorption before dressing</li>
+                <li>Use daily for best results, or as needed throughout the day</li>
+            </ul>
+            <p>
+                <strong>Pro tip:</strong> For an extra luxurious experience, apply before bed and let the butter 
+                work its magic overnight. Wake up to softer, smoother, deeply nourished skin.
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About HABIECARE</h3>
+                <p>Handcrafted natural skincare products made with love in Akure. We believe in the power of nature to nourish and heal your skin.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="#shop">Shop</a>
+                <a href="#story">Our Story</a>
+                <a href="#contact">Contact</a>
+                <a href="#faq">FAQ</a>
+            </div>
+            <div class="footer-section">
+                <h3>Customer Care</h3>
+                <a href="#shipping">Shipping Info</a>
+                <a href="#returns">Returns</a>
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <p>Akure, Nigeria</p>
+                <p>hello@habiecare.com</p>
+                <p>+234 XXX XXX XXXX</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2024 HABIECARE NATURALS. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        let quantity = 1;
+
+        function changeQuantity(change) {
+            quantity = Math.max(1, quantity + change);
+            document.getElementById('quantity').textContent = quantity;
+        }
+
+        function switchTab(tabName) {
+            // Remove active class from all tabs and contents
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+            
+            // Add active class to selected tab and content
+            event.target.classList.add('active');
+            document.getElementById(tabName).classList.add('active');
+        }
+
+        // Size option selection
+        document.querySelectorAll('.size-option').forEach(option => {
+            option.addEventListener('click', function() {
+                document.querySelectorAll('.size-option').forEach(opt => opt.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

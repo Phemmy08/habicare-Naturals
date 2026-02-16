@@ -1,74 +1,99 @@
+/**
+ * HABIECARE NATURALS - Main JavaScript
+ */
+
 // Initialize Lucide Icons
-        lucide.createIcons();
+if (typeof lucide !== 'undefined') {
+    lucide.createIcons();
+}
 
-        // Header Scroll Effect
-        const header = document.getElementById('header');
-        
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 20) {
-                header.classList.add('header-scrolled');
-            } else {
-                header.classList.remove('header-scrolled');
-            }
-        });
-
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileMenuClose = document.getElementById('mobile-menu-close');
-        const mobileOverlay = document.getElementById('mobile-overlay');
-
-        function openMobileMenu() {
-            mobileMenu.classList.add('active');
-            mobileOverlay.classList.remove('hidden');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeMobileMenu() {
-            mobileMenu.classList.remove('active');
-            mobileOverlay.classList.add('hidden');
-            document.body.style.overflow = '';
-        }
-
-        mobileMenuBtn.addEventListener('click', openMobileMenu);
-        mobileMenuClose.addEventListener('click', closeMobileMenu);
-        mobileOverlay.addEventListener('click', closeMobileMenu);
-
-        // Close mobile menu when clicking a link
-        const mobileLinks = mobileMenu.querySelectorAll('a');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', closeMobileMenu);
-        });
-
-        // Smooth Scroll for Anchor Links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    const headerHeight = header.offsetHeight;
-                    const targetPosition = target.offsetTop - headerHeight;
-                    
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-
-
-       // Wait for DOM to be fully loaded
+// Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
     
-    // Get all category cards
+    // Re-initialize Lucide Icons after DOM is loaded
+    if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+    }
+
+    // ================================
+    // MOBILE MENU FUNCTIONALITY
+    // ================================
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuClose = document.getElementById('mobile-menu-close');
+    const mobileOverlay = document.getElementById('mobile-overlay');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+    // Function to open mobile menu
+    function openMobileMenu() {
+        mobileMenu.classList.add('active');
+        mobileOverlay.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    }
+
+    // Function to close mobile menu
+    function closeMobileMenu() {
+        mobileMenu.classList.remove('active');
+        mobileOverlay.classList.add('hidden');
+        document.body.style.overflow = '';
+    }
+
+    // Open menu when hamburger button is clicked
+    if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', openMobileMenu);
+    }
+
+    // Close menu when close button is clicked
+    if (mobileMenuClose) {
+        mobileMenuClose.addEventListener('click', closeMobileMenu);
+    }
+
+    // Close menu when overlay is clicked
+    if (mobileOverlay) {
+        mobileOverlay.addEventListener('click', closeMobileMenu);
+    }
+
+    // Close menu when a navigation link is clicked
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            closeMobileMenu();
+        });
+    });
+
+    // Close menu on escape key press
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+            closeMobileMenu();
+        }
+    });
+
+    // ================================
+    // HEADER SCROLL EFFECT
+    // ================================
+    const header = document.getElementById('header');
+    let lastScroll = 0;
+
+    window.addEventListener('scroll', function() {
+        const currentScroll = window.pageYOffset;
+
+        if (currentScroll > 100) {
+            header.classList.add('header-scrolled');
+        } else {
+            header.classList.remove('header-scrolled');
+        }
+
+        lastScroll = currentScroll;
+    });
+
+    // ================================
+    // PRODUCT CATEGORIES
+    // ================================
     const categoryCards = document.querySelectorAll('.category-card');
     
     // Add enhanced hover effects and analytics tracking
     categoryCards.forEach(card => {
         
-        // Track mouse enter for analytics (can be integrated with GA4, etc.)
+        // Track mouse enter for analytics
         card.addEventListener('mouseenter', function() {
             const categoryName = this.querySelector('.category-name').textContent;
             console.log(`User hovering over: ${categoryName}`);
@@ -95,13 +120,12 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(() => {
                 this.style.transform = '';
             }, 150);
-            
-            // You can add analytics tracking here
-            // Example: gtag('event', 'category_click', { category_name: categoryName });
         });
     });
     
-    // Intersection Observer for scroll animations
+    // ================================
+    // SCROLL ANIMATIONS
+    // ================================
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -100px 0px'
@@ -116,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     setTimeout(() => {
                         card.style.opacity = '1';
                         card.style.transform = 'translateY(0)';
-                    }, index * 100); // Stagger by 100ms
+                    }, index * 100);
                 });
                 
                 // Unobserve after animation
@@ -138,13 +162,17 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(categoriesGrid);
     }
     
-    // Add smooth scroll behavior for anchor links
-    categoryCards.forEach(card => {
-        card.addEventListener('click', function(e) {
+    // ================================
+    // SMOOTH SCROLL FOR ANCHOR LINKS
+    // ================================
+    const allLinks = document.querySelectorAll('a[href^="#"]');
+    
+    allLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
             
-            // Check if it's an anchor link (starts with #)
-            if (href && href.startsWith('#')) {
+            // Check if it's a valid anchor link
+            if (href && href !== '#' && href.startsWith('#')) {
                 e.preventDefault();
                 
                 const targetId = href.substring(1);
@@ -160,7 +188,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Add keyboard navigation support for accessibility
+    // ================================
+    // KEYBOARD NAVIGATION
+    // ================================
     categoryCards.forEach(card => {
         card.addEventListener('keydown', function(e) {
             // Enter or Space key
@@ -171,15 +201,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Performance: Debounce resize handler
+    // ================================
+    // PERFORMANCE: DEBOUNCE RESIZE
+    // ================================
     let resizeTimer;
     window.addEventListener('resize', function() {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(function() {
-            console.log('Window resized - Categories section adjusted');
-            // Add any resize-specific logic here if needed
+            console.log('Window resized - Layout adjusted');
         }, 250);
     });
     
-    console.log('✓ Categories section initialized successfully');
+    console.log('✓ HABIECARE NATURALS website initialized successfully');
 });

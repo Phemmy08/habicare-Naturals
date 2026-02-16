@@ -32,7 +32,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Icons -->
-    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
 
     <!-- Open Graph / Social -->
     <meta property="og:site_name" content="HABIECARE NATURALS">
@@ -128,6 +128,9 @@
         </div>
     </header>
 
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"></div>
+
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 bottom-0 w-full sm:w-80 bg-white z-50 shadow-2xl">
         <div class="flex flex-col h-full">
@@ -141,16 +144,16 @@
 
             <!-- Mobile Navigation Links -->
             <nav class="flex-1 px-6 py-8 space-y-6">
-                <a href="#" class="block text-lg font-medium text-[var(--text-primary)] hover:text-[var(--sage-green)] transition-smooth">
+                <a href="#" class="mobile-nav-link block text-lg font-medium text-[var(--text-primary)] hover:text-[var(--sage-green)] transition-smooth">
                     Home
                 </a>
-                <a href="#shop" class="block text-lg font-medium text-[var(--text-primary)] hover:text-[var(--sage-green)] transition-smooth">
+                <a href="#shop" class="mobile-nav-link block text-lg font-medium text-[var(--text-primary)] hover:text-[var(--sage-green)] transition-smooth">
                     Shop
                 </a>
-                <a href="#story" class="block text-lg font-medium text-[var(--text-primary)] hover:text-[var(--sage-green)] transition-smooth">
+                <a href="#story" class="mobile-nav-link block text-lg font-medium text-[var(--text-primary)] hover:text-[var(--sage-green)] transition-smooth">
                     Our Story
                 </a>
-                <a href="#contact" class="block text-lg font-medium text-[var(--text-primary)] hover:text-[var(--sage-green)] transition-smooth">
+                <a href="#contact" class="mobile-nav-link block text-lg font-medium text-[var(--text-primary)] hover:text-[var(--sage-green)] transition-smooth">
                     Contact
                 </a>
             </nav>
@@ -170,9 +173,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Mobile Menu Overlay -->
-    <div id="mobile-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"></div>
 
     <!-- HERO SECTION -->
     <section class="relative min-h-screen flex items-center pt-20">
@@ -232,8 +232,9 @@
             </div>
         </div>
     </section>
-     <!-- Product Categories Section -->
-    <section class="categories-section">
+
+    <!-- Product Categories Section -->
+    <section id="shop" class="categories-section">
         <div class="container">
             <!-- Section Header -->
             <div class="section-header">
@@ -245,7 +246,7 @@
             <div class="categories-grid">
                 
                 <!-- Category Card 1 -->
-                <a href="#face-care" class="category-card">
+                <a href="bliss-body-butter/" class="category-card">
                     <div class="category-image">
                         <img src="images/1.jpg" alt="Bliss Body Butter" loading="lazy">
                     </div>
