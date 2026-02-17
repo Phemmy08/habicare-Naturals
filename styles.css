@@ -150,7 +150,7 @@ body {
 
 /* Hero Background Image */
 .hero-bg {
-    background-image: url('https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?q=80&w=2000');
+    background-image: url('images/background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
