@@ -403,3 +403,626 @@ body {
         font-size: 1.5rem;
     }
 }
+
+
+
+
+
+
+
+
+
+
+/* Why Choose HABIECARE NATURALS Section */
+.why-choose-section {
+    padding: 80px 20px;
+    background-color: var(--soft-white);
+}
+
+.why-choose-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Section Header */
+.why-choose-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.why-choose-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+    letter-spacing: 0.02em;
+}
+
+.why-choose-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    letter-spacing: 0.02em;
+}
+
+/* Features Grid */
+.why-choose-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+}
+
+/* Feature Card */
+.why-choose-card {
+    background-color: var(--cream);
+    border-radius: 20px;
+    padding: 40px 32px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.why-choose-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(139, 157, 131, 0.12);
+}
+
+/* Icon */
+.why-choose-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    background-color: var(--soft-white);
+    border-radius: 50%;
+    margin-bottom: 24px;
+    color: var(--sage-green);
+    transition: all 0.4s ease;
+}
+
+.why-choose-card:hover .why-choose-icon {
+    background-color: var(--sage-green);
+    color: var(--soft-white);
+    transform: scale(1.1);
+}
+
+/* Card Title */
+.why-choose-card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+    letter-spacing: 0.02em;
+    transition: color 0.3s ease;
+}
+
+.why-choose-card:hover .why-choose-card-title {
+    color: var(--sage-green);
+}
+
+/* Card Text */
+.why-choose-card-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.938rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    letter-spacing: 0.01em;
+}
+
+/* Responsive Design */
+@media (min-width: 640px) {
+    .why-choose-section {
+        padding: 100px 32px;
+    }
+
+    .why-choose-title {
+        font-size: 3rem;
+    }
+
+    .why-choose-subtitle {
+        font-size: 1.125rem;
+    }
+
+    .why-choose-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 36px;
+    }
+
+    .why-choose-card {
+        padding: 48px 36px;
+    }
+
+    .why-choose-card-title {
+        font-size: 1.75rem;
+    }
+
+    .why-choose-card-text {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .why-choose-section {
+        padding: 120px 40px;
+    }
+
+    .why-choose-header {
+        margin-bottom: 80px;
+    }
+
+    .why-choose-title {
+        font-size: 3.5rem;
+    }
+
+    .why-choose-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 32px;
+    }
+
+    .why-choose-card {
+        padding: 44px 32px;
+    }
+
+    .why-choose-icon {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 28px;
+    }
+
+    .why-choose-card-title {
+        font-size: 1.625rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .why-choose-grid {
+        gap: 36px;
+    }
+}
+
+
+
+/* Our Story Section */
+.our-story-section {
+  background: var(--soft-white);
+  padding: 80px 20px;
+}
+
+.story-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.story-image {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.story-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.story-content {
+  padding: 20px 0;
+}
+
+.story-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--sage-green);
+  display: block;
+  margin-bottom: 16px;
+}
+
+.story-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.story-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.story-button {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--soft-white);
+  background: var(--sage-green);
+  padding: 14px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: 12px;
+  box-shadow: 0 2px 8px rgba(139, 157, 131, 0.2);
+}
+
+.story-button:hover {
+  background: var(--sage-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(139, 157, 131, 0.3);
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  background: var(--cream);
+  padding: 80px 20px;
+}
+
+.testimonials-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonials-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.testimonials-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.testimonials-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.testimonial-card {
+  background: var(--soft-white);
+  padding: 36px 28px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-stars {
+  color: var(--sage-green);
+  font-size: 1.125rem;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.testimonial-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+}
+
+.testimonial-author {
+  border-top: 1px solid rgba(139, 157, 131, 0.15);
+  padding-top: 20px;
+}
+
+.author-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.author-location {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .story-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .story-heading {
+    font-size: 2rem;
+  }
+  
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .testimonials-heading {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .our-story-section,
+  .testimonials-section {
+    padding: 60px 20px;
+  }
+  
+  .story-heading {
+    font-size: 1.75rem;
+  }
+  
+  .testimonials-heading {
+    font-size: 1.75rem;
+  }
+  
+  .testimonials-header {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .story-heading {
+    font-size: 1.5rem;
+  }
+  
+  .story-text {
+    font-size: 0.9375rem;
+  }
+  
+  .testimonials-heading {
+    font-size: 1.5rem;
+  }
+  
+  .testimonials-subtitle {
+    font-size: 1rem;
+  }
+  
+  .testimonial-card {
+    padding: 28px 24px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* HABIECARE NATURALS - Global Footer Styles */
+
+.site-footer {
+  background-color: var(--cream);
+  padding: 4rem 2rem 2rem;
+  margin-top: 6rem;
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* Brand Column */
+.footer-brand {
+  grid-column: span 1;
+}
+
+.footer-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.footer-description {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+}
+
+.footer-tagline {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--sage-green);
+  font-weight: 500;
+}
+
+/* Column Headings */
+.footer-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.3px;
+}
+
+/* Links */
+.footer-links,
+.footer-contact {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li,
+.footer-contact li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-links a,
+.footer-contact a {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+  color: var(--sage-green);
+}
+
+.footer-contact li {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* Bottom Section */
+.footer-divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--sage-green);
+  opacity: 0.2;
+  margin-bottom: 1.5rem;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.footer-copyright {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Social Icons */
+.footer-social {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.footer-social a {
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-social a:hover {
+  color: var(--sage-green);
+  transform: translateY(-2px);
+}
+
+.footer-social svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+
+  .footer-brand {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .site-footer {
+    padding: 3rem 1.5rem 1.5rem;
+    margin-top: 4rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-brand {
+    grid-column: span 1;
+    text-align: center;
+  }
+
+  .footer-logo {
+    font-size: 1.35rem;
+  }
+
+  .footer-description {
+    font-size: 0.9rem;
+  }
+
+  .footer-column {
+    text-align: center;
+  }
+
+  .footer-heading {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .footer-copyright {
+    font-size: 0.8rem;
+  }
+}

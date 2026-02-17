@@ -214,3 +214,108 @@ document.addEventListener('DOMContentLoaded', function() {
     
     console.log('✓ HABIECARE NATURALS website initialized successfully');
 });
+
+
+/**
+ * Why Choose HABIECARE NATURALS Section - Interactive JavaScript
+ */
+
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // Re-initialize Lucide Icons for this section
+    if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+    }
+    
+    // Get all feature cards
+    const whyChooseCards = document.querySelectorAll('.why-choose-card');
+    
+    if (whyChooseCards.length === 0) return;
+    
+    // Intersection Observer for scroll animations
+    const observerOptions = {
+        threshold: 0.15,
+        rootMargin: '0px 0px -80px 0px'
+    };
+    
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Add staggered animation
+                const cards = entry.target.querySelectorAll('.why-choose-card');
+                cards.forEach((card, index) => {
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, index * 120);
+                });
+                
+                // Unobserve after animation
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+    
+    // Observe the grid
+    const whyChooseGrid = document.querySelector('.why-choose-grid');
+    if (whyChooseGrid) {
+        // Set initial state for animation
+        whyChooseCards.forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        });
+        
+        observer.observe(whyChooseGrid);
+    }
+    
+    console.log('✓ Why Choose section initialized');
+});
+
+
+// Optional: Smooth scroll for "Discover Our Journey" button
+document.addEventListener('DOMContentLoaded', function() {
+  const storyButton = document.querySelector('.story-button');
+  
+  if (storyButton) {
+    storyButton.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      
+      // Only prevent default if it's a hash link
+      if (href && href.startsWith('#')) {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      }
+    });
+  }
+});
+
+
+
+
+(function() {
+  'use strict';
+  
+  // Update copyright year
+  function updateYear() {
+    const yearElement = document.querySelector('.footer-year');
+    if (yearElement) {
+      const currentYear = new Date().getFullYear();
+      yearElement.textContent = currentYear;
+    }
+  }
+  
+  // Initialize on DOM ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', updateYear);
+  } else {
+    updateYear();
+  }
+})();
