@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop — HABIECARE NATURALS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* ===== SHOP INTRO / HERO ===== */
+    .shop-intro {
+      position: relative;
+      width: 100%;
+      height: 600px;
+      overflow: hidden;
+    }
+    .shop-intro .hero-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .shop-intro .intro-inner {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.35);
+      color: #fff;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    /* ===== PRODUCT CARD IMAGE ===== */
+    .card-image-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+    }
+    .card-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .product-card:hover .card-image-wrap img {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+
+      <!-- LEFT: Logo -->
+      <a href="#" class="logo">HABIECARE NATURALS</a>
+
+      <!-- CENTER: Nav -->
+      <nav class="nav-center" aria-label="Main navigation">
+        <a href="#" class="nav-link">Shop</a>
+        <a href="#" class="nav-link">Our Story</a>
+        <a href="#" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- RIGHT: Icons + Hamburger -->
+      <div class="nav-right">
+        <button class="icon-btn" aria-label="Search">
+          <i data-lucide="search"></i>
+        </button>
+        <button class="icon-btn cart-btn" aria-label="Cart">
+          <i data-lucide="shopping-bag"></i>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU OVERLAY -->
+  <div class="mobile-overlay" id="mobileOverlay" aria-hidden="true"></div>
+
+  <!-- MOBILE SLIDE-IN MENU -->
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation" aria-hidden="true">
+    <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close menu">
+      <i data-lucide="x"></i>
+    </button>
+    <div class="mobile-nav-links">
+      <a href="../" class="mobile-nav-link">Home</a>
+      <a href="#" class="mobile-nav-link">Our Story</a>
+      <a href="#" class="mobile-nav-link">Contact</a>
+    </div>
+    <div class="mobile-nav-icons">
+      <button class="icon-btn" aria-label="Search">
+        <i data-lucide="search"></i>
+      </button>
+      <button class="icon-btn cart-btn" aria-label="Cart">
+        <i data-lucide="shopping-bag"></i>
+        <span class="cart-badge">0</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== MAIN ===== -->
+  <main>
+
+    <!-- SHOP INTRO / HERO SECTION -->
+    <section class="shop-intro" aria-labelledby="shopIntroHeading">
+      <img
+        src="images/hero.jpg"
+        alt="Habiecare Naturals handcrafted skincare products"
+        class="hero-img"
+      />
+      <div class="intro-inner">
+        <span class="intro-eyebrow">Handcrafted in Akure</span>
+        <h1 id="shopIntroHeading" class="intro-heading">Shop Our Collection</h1>
+        <p class="intro-subtext">Explore our handcrafted natural skincare products made in Akure.</p>
+        <div class="intro-divider"></div>
+      </div>
+    </section>
+
+    <!-- BODY CARE SECTION -->
+    <section class="product-section" id="bodycare" aria-labelledby="bodyCareHeading">
+      <div class="section-inner">
+        <div class="section-label-wrap">
+          <span class="section-label">Body Care</span>
+          <h2 id="bodyCareHeading" class="section-heading">Nourish Your Body</h2>
+          <p class="section-sub">Rich, botanical formulas for skin that glows from within.</p>
+        </div>
+
+        <div class="product-grid" role="list">
+
+          <!-- Card 1 -->
+          <article class="product-card" role="listitem">
+            <div class="card-image-wrap">
+              <img src="../images/1.jpg" alt="Bliss Body Butter" />
+              <span class="card-badge-tag">Bestseller</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-name">Bliss Body Butter</h3>
+              <p class="card-benefit">Deep moisturization with a silky-smooth finish</p>
+              <p class="card-price">₦13,000</p>
+              <div class="card-actions">
+                <button class="btn btn-outline" data-product="Bliss Body Butter">View Product</button>
+                <button class="btn btn-primary add-to-cart" data-product="Bliss Body Butter" data-price="13000">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="product-card" role="listitem">
+            <div class="card-image-wrap">
+              <img src="../images/Black-soap.jpg" alt="Refreshing Black Soap" />
+            </div>
+            <div class="card-body">
+              <h3 class="card-name">Refreshing Black Soap</h3>
+              <p class="card-benefit">Gently cleanses and balances skin tone</p>
+              <p class="card-price">₦6,500</p>
+              <div class="card-actions">
+                <button class="btn btn-outline" data-product="Refreshing Black Soap">View Product</button>
+                <button class="btn btn-primary add-to-cart" data-product="Refreshing Black Soap" data-price="6500">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="product-card" role="listitem">
+            <div class="card-image-wrap">
+              <img src="../images/natural-scrub.jpg" alt="Turmeric Black Scrub" />
+            </div>
+            <div class="card-body">
+              <h3 class="card-name">Turmeric Black Scrub</h3>
+              <p class="card-benefit">Exfoliates and brightens for radiant skin</p>
+              <p class="card-price">₦6,500</p>
+              <div class="card-actions">
+                <button class="btn btn-outline" data-product="Turmeric Black Scrub">View Product</button>
+                <button class="btn btn-primary add-to-cart" data-product="Turmeric Black Scrub" data-price="6500">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="product-card" role="listitem">
+            <div class="card-image-wrap">
+              <img src="images/radiance-glow-oil.jpg" alt="Radiance Glow Oil" />
+            </div>
+            <div class="card-body">
+              <h3 class="card-name">Anti-aging-face-serum</h3>
+                <p class="card-benefit">firming, brightening, antioxidant-rich, lightweight, rejuvenating</p>
+              <p class="card-price">₦6,500</p>
+              <div class="card-actions">
+                <button class="btn btn-outline" data-product="Radiance Glow Oil">View Product</button>
+                <button class="btn btn-primary add-to-cart" data-product="Radiance Glow Oil" data-price="6500">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="product-card" role="listitem">
+            <div class="card-image-wrap">
+              <img src="images/black-soap-shower-gel.jpg" alt="Black Soap Shower Gel" />
+            </div>
+            <div class="card-body">
+              <h3 class="card-name">Black Soap Shower Gel</h3>
+              <p class="card-benefit">Lathers richly and leaves skin refreshed</p>
+              <p class="card-price">₦6,500</p>
+              <div class="card-actions">
+                <button class="btn btn-outline" data-product="Black Soap Shower Gel">View Product</button>
+                <button class="btn btn-primary add-to-cart" data-product="Black Soap Shower Gel" data-price="6500">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- DECORATIVE DIVIDER -->
+    <div class="section-divider" aria-hidden="true">
+      <div class="divider-line"></div>
+      <i data-lucide="flower-2" class="divider-icon"></i>
+      <div class="divider-line"></div>
+    </div>
+
+    <!-- FACE CARE SECTION -->
+    <section class="product-section product-section--alt" id="facecare" aria-labelledby="faceCareHeading">
+      <div class="section-inner">
+        <div class="section-label-wrap">
+          <span class="section-label">Face Care</span>
+          <h2 id="faceCareHeading" class="section-heading">Revive Your Complexion</h2>
+          <p class="section-sub">Targeted botanical treatments for your most radiant face.</p>
+        </div>
+
+        <div class="product-grid" role="list">
+
+          <!-- Card 1 -->
+          <article class="product-card" role="listitem">
+            <div class="card-image-wrap">
+              <img src="images/moisturizing-face-cream.jpg" alt="Moisturizing Face Cream" />
+              <span class="card-badge-tag">Popular</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-name">Moisturizing Face Cream</h3>
+              <p class="card-benefit">Intense hydration for soft, supple skin all day</p>
+              <p class="card-price">₦6,500</p>
+              <div class="card-actions">
+                <button class="btn btn-outline" data-product="Moisturizing Face Cream">View Product</button>
+                <button class="btn btn-primary add-to-cart" data-product="Moisturizing Face Cream" data-price="6500">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="product-card" role="listitem">
+            <div class="card-image-wrap">
+              <img src="images/calming-face-toner.jpg" alt="Calming Face Toner" />
+            </div>
+            <div class="card-body">
+              <h3 class="card-name">Calming Face Toner</h3>
+              <p class="card-benefit">Soothes redness and refines pores naturally</p>
+              <p class="card-price">₦5,000</p>
+              <div class="card-actions">
+                <button class="btn btn-outline" data-product="Calming Face Toner">View Product</button>
+                <button class="btn btn-primary add-to-cart" data-product="Calming Face Toner" data-price="5000">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="product-card" role="listitem">
+            <div class="card-image-wrap">
+              <img src="images/anti-aging-face-serum.jpg" alt="Anti-Aging Face Serum" />
+            </div>
+            <div class="card-body">
+              <h3 class="card-name">Anti-Aging Face Serum</h3>
+              <p class="card-benefit">Firms and brightens with potent botanical actives</p>
+              <p class="card-price">₦5,000</p>
+              <div class="card-actions">
+                <button class="btn btn-outline" data-product="Anti-Aging Face Serum">View Product</button>
+                <button class="btn btn-primary add-to-cart" data-product="Anti-Aging Face Serum" data-price="5000">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="product-card" role="listitem">
+            <div class="card-image-wrap">
+              <img src="images/cleansing-face-soap.jpg" alt="Cleansing Face Soap" />
+            </div>
+            <div class="card-body">
+              <h3 class="card-name">Cleansing Face Soap</h3>
+              <p class="card-benefit">Purifies gently without stripping natural moisture</p>
+              <p class="card-price">₦3,500</p>
+              <div class="card-actions">
+                <button class="btn btn-outline" data-product="Cleansing Face Soap">View Product</button>
+                <button class="btn btn-primary add-to-cart" data-product="Cleansing Face Soap" data-price="3500">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="product-card" role="listitem">
+            <div class="card-image-wrap">
+              <img src="images/acne-removal-cream.jpg" alt="Acne Removal Cream" />
+            </div>
+            <div class="card-body">
+              <h3 class="card-name">Acne Removal Cream</h3>
+              <p class="card-benefit">Targets blemishes and evens skin tone fast</p>
+              <p class="card-price">₦6,500</p>
+              <div class="card-actions">
+                <button class="btn btn-outline" data-product="Acne Removal Cream">View Product</button>
+                <button class="btn btn-primary add-to-cart" data-product="Acne Removal Cream" data-price="6500">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+
+      <div class="footer-col footer-col--brand">
+        <p class="footer-logo">HABIECARE NATURALS</p>
+        <p class="footer-desc">Pure, handcrafted skincare rooted in nature. We believe in the healing power of botanicals for every skin type.</p>
+        <p class="footer-location">
+          <i data-lucide="map-pin"></i>
+          Akure, Nigeria
+        </p>
+      </div>
+
+      <div class="footer-col footer-col--links">
+        <h3 class="footer-col-heading">Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col--contact">
+        <h3 class="footer-col-heading">Contact Us</h3>
+        <ul class="footer-contact-list">
+          <li>
+            <i data-lucide="mail"></i>
+            <span>hello@habicarenaturals.com</span>
+          </li>
+          <li>
+            <i data-lucide="phone"></i>
+            <span>+234 800 000 0000</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 HABIECARE NATURALS. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Toast notification -->
+  <div class="cart-toast" id="cartToast" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
