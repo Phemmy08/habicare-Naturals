@@ -329,6 +329,53 @@ button {
   margin-top: auto;
 }
 
+
+
+
+/* ===== SHOP INTRO / HERO ===== */
+    .shop-intro {
+      position: relative;
+      width: 100%;
+      height: 600px;
+      overflow: hidden;
+    }
+    .shop-intro .hero-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .shop-intro .intro-inner {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.35);
+      color: #fff;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    /* ===== PRODUCT CARD IMAGE ===== */
+    .card-image-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+    }
+    .card-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .product-card:hover .card-image-wrap img {
+      transform: scale(1.05);
+    }
+
 /* ============================================================
    SHOP INTRO SECTION
    ============================================================ */
@@ -349,13 +396,13 @@ button {
   transform: translateX(-50%);
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(139, 157, 131, 0.1) 0%, transparent 70%);
+ /*  background: radial-gradient(circle, rgba(139, 157, 131, 0.1) 0%, transparent 70%); */
   pointer-events: none;
 }
 
 .intro-inner {
   position: relative;
-  max-width: 680px;
+  max-width: auto;
   margin: 0 auto;
 }
 
